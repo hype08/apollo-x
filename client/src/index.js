@@ -12,7 +12,6 @@ import Login from './pages/login';
 import { resolvers, typeDefs } from './resolvers';
 import injectStyles from './styles';
 
-
 const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
@@ -48,7 +47,7 @@ function IsLoggedIn() {
 injectStyles();
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Pages />
+    <IsLoggedIn />
   </ApolloProvider>,
   document.getElementById("root")
 );
